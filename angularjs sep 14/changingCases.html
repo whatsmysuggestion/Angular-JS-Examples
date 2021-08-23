@@ -1,0 +1,22 @@
+<html>
+<script src="angular.min.js"></script>
+ 
+ <body>
+
+<div ng-app="wms" ng-controller="wmsCtrl">
+<p>{{ x1 }}</p>
+<p>{{ x2 }}</p>
+<p>{{ x3 }}</p>
+</div>
+
+<script>
+var app = angular.module('wms', []);
+app.controller('wmsCtrl', function($scope) {
+    $scope.x1 = "WhatsMySuggestion";
+    $scope.x2 = angular.lowercase($scope.x1);
+	$scope.x3 = angular.uppercase($scope.x1);
+});
+</script>
+
+</body>
+</html>

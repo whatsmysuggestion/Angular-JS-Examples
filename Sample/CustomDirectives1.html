@@ -1,0 +1,22 @@
+ <html>
+<head>
+      <script src="angular.min.js"></script> 
+
+</head>
+ 
+ <body ng-app="myApp">
+
+<whats-my-suggestion></whats-my-suggestion> 
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("whatsMySuggestion", function() {
+    return {
+		restrict : "E",
+        template : "<h1>Welcome To WhatsMySuggestion!</h1>"
+    };
+});
+</script>
+</body>
+ 
+</html>

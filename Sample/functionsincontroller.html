@@ -1,0 +1,30 @@
+<html>
+<head>
+      <script src="angular.min.js"></script> 
+	  
+</head>
+<body>
+
+<div ng-app="testApp" ng-controller="TestCtrl">	
+ 
+ {{myDetails()}}
+ 
+ </div>
+   
+   <script>
+   var test=angular.module("testApp",[]);
+   
+   test.controller("TestCtrl",function($scope)
+   {
+   $scope.eno=1;
+   $scope.ename="HELLO"; 
+   $scope.myDetails=function()
+		{
+	return $scope.eno+"  "+$scope.ename;	
+		} 	
+   });   
+   
+   </script>
+   
+   </body>
+</html>

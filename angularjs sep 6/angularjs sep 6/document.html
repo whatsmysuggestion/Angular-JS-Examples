@@ -1,0 +1,43 @@
+ 
+<html>
+<head> 
+<script src="angular.min.js"></script>
+ 
+  <title>Testing $document Example</title> 
+  <script>    
+var app = angular.module('app', []);    
+    app.controller("FilterController", function ($scope,$document) {    
+      $scope.title = '';  
+      $scope.cookie = '';  
+      $scope.DocumentTitle = function()    
+      {    
+        $scope.title = $document[0].title;    
+          
+      }    
+      $scope.DocumentCookies = function()    
+      {    
+         $scope.cookie = $document[0].cookie;       
+      }    
+    });    
+</script>    
+</head>    
+<body style="background-color:#DDE4E9;">    
+  <fieldset style="background-color:#DDE4E9;">                
+     
+  <div ng-app="app">          
+    <div ng-controller="FilterController">     
+      Get Document Title:            
+        <input type="string" ng-model="title">            
+        <button ng-click="DocumentTitle()">Documnet Title</button></br>         
+      Get Document Cookie:          
+        <input type="string" ng-model="cookie">            
+        <button ng-click="DocumentCookies()">Document Cookies</button> </br> 
+    </div>          
+</div>    
+ </fieldset>     
+</body>    
+</html>  
+
+
+
+ 

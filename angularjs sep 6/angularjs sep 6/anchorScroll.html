@@ -1,0 +1,43 @@
+
+<html>          
+<head> 
+       
+<script src="angular.min.js"></script> 
+ <script>   
+    var app = angular.module("ASI",[]); 
+   app.controller("ASC",['$location','$anchorScroll','$scope',
+   function ($location,$anchorScroll,$scope){  
+	$scope.moveTop = function()
+	 {
+		$location.hash('upLink'); 
+		$anchorScroll();
+	 }
+	 $scope.moveDown = function()
+	 {                           
+		$location.hash('downLink'); 
+		$anchorScroll();
+	 }                                                                       
+  }]);  
+</script>          
+</head>          
+<body style="background-color:#DDE4E9;font-family:arial;" ng-app="ASI">          
+  <fieldset style="background-color:#DDE4E9;">            
+         
+<div ng-controller="ASC">
+  <a href="" id="upLink" ng-click="moveDown()">Go to down</a>
+  <div style="height:1000px">
+    <p style="font-family:Arial;color:yellow;
+	background:steelblue;padding:3px;width:350px;">Down Link</p> 
+  </div>
+   <a href="" id="downLink" ng-click="moveTop()">Go to down</a>
+    <p style="font-family:Arial;color:yellow;
+	background:steelblue;padding:3px;width:350px;">Up Link</p>
+    </div>  
+      </fieldset>           
+</body>          
+</html>   
+
+
+
+
+ 

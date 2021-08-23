@@ -1,0 +1,24 @@
+<html>
+<head>
+      <script src="angular.min.js"></script> 
+	  
+</head>
+<body>
+<div ng-app="testApp" ng-controller="TestCtrl">	 
+ <ul>
+<li ng-repeat="x in data">{{x}}</li>
+</ul> 
+ 
+ </div>
+   
+   <script>
+   angular.module("testApp",[]).controller("TestCtrl",function($scope)
+   {
+   $scope.data=[1,2,3,4,5,6,7,8];
+  	
+   });   
+   
+   </script>
+   
+   </body>
+</html>

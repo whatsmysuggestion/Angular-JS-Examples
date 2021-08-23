@@ -1,0 +1,36 @@
+<html>
+<script src="angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="no=7">
+
+
+<input type="text" ng-model="no" ng-keyup="myFunction()"/></br>
+
+<p ng-bind-html="myText"></p>
+
+</div>
+
+<script>
+var app = angular.module("myApp", ['ngSanitize']);
+app.controller("myCtrl", function($scope) {
+
+ $scope.myFunction = function() {
+var k="<table border=1>";
+for(i=1;i<=10;i++)
+	k=k+"<tr><td>"+$scope.no+"</td><td>*</td><td>"+i
+	+"</td><td>=</td><td>"+($scope.no*i)+"</td></tr>";
+	
+	k=k+"</table>";
+	
+    $scope.myText = k;
+    }
+
+
+});
+</script>
+ 
+
+</body>
+</html>

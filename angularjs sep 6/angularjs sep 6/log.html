@@ -1,0 +1,64 @@
+ 
+<html>
+<head> 
+<script src="angular.min.js"></script>
+ 
+ 
+  <script>
+var app = angular.module('app', []);
+    app.controller("LogController", function ($scope,$log) {
+  		 
+      $scope.LogMessage = function()
+      {
+         $log.log($scope.message);      
+      }
+      $scope.LogError = function()
+      {
+         $log.error($scope.error);    
+      }
+      $scope.logInfo = function()
+      {
+         $log.info($scope.info);      
+      }
+      $scope.logWarning = function()
+      {
+         $log.warn($scope.warning);     
+      }
+      $scope.logDebug = function()
+      {
+         $log.debug($scope.debug);     
+      }
+    });
+</script>
+</head>
+<body style="background-color:#DDE4E9;">
+  <fieldset style="background-color:#DDE4E9;">            
+ 
+  <div ng-app="app">      
+    <div ng-controller="LogController"> 
+ 
+      Log Message:        
+        <input type="string" ng-model="message">        
+        <button ng-click="LogMessage()">Log Message</button></br>     
+      Log Error:      
+        <input type="string" ng-model="error">        
+        <button ng-click="LogError()">Log Error</button> </br>     
+      Log Info:    
+      <input type="string" ng-model="info">  
+        <button ng-click="logInfo()">Log Info</button> </br>
+    Log Warning:      
+        <input type="string" ng-model="warning">        
+        <button ng-click="logWarning()">Log Warning</button> </br>     
+      Log Debug:    
+    <input type="string" ng-model="debug">  
+        <button ng-click="logDebug()">Log Debug</button> </br>
+    </div>      
+</div>
+ </fieldset> 
+</body>
+</html>
+
+
+
+
+ 

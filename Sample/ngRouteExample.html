@@ -1,0 +1,36 @@
+ <html>
+<head>
+      <script src="angular.min.js"></script> 
+	    <script src="script.js"></script>
+</head>
+ <body ng-app="testApp">
+
+<p><a href="#/!">HOME</a></p>
+
+<a href="#!f">First</a>
+<a href="#!s">Second</a>
+<a href="#!t">Third</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("testApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "home.html"
+    })
+    .when("/f", {
+        templateUrl : "f.html"
+    })
+    .when("/s", {
+        templateUrl : "s.html"
+    })
+    .when("/t", {
+        templateUrl : "t.html"
+    });
+});
+</script>
+ 
+</body>
+</html>

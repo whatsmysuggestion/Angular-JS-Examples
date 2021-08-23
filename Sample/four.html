@@ -1,0 +1,24 @@
+<html>
+<head>
+      <script src="angular.min.js"></script> 
+</head>
+<body>
+
+<div ng-app="" ng-init="eno=1;ename='a';esal=12.3">	 
+
+ <input type="text" ng-model="eno"/><br>
+  <input type="text" ng-model="ename"/><br>
+   <input type="text" ng-model="esal"/><br>
+   
+   <!--<h1>{{eno}} {{ename}} {{esal}}</h1>-->
+   <h1 ng-bind="eno"></h1>
+   <h1 ng-bind="ename"></h1>
+   <h1 ng-bind="esal"></h1> 
+   
+ 
+ 
+ </div>
+   
+   
+   </body>
+</html>

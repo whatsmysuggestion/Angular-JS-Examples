@@ -1,0 +1,15 @@
+ <html>
+<head>
+      <script src="angular.min.js"></script> 	  
+</head>
+<body ng-app="">
+ <form name="frm">
+ 
+ Enter your email:- 
+ <input type="email" name="t1" ng-model="mailid" required/> </br>
+ 
+ </form>
+  {{frm.t1.$dirty}}  {{frm.t1.$pristine}}
+ 
+   </body>
+</html>

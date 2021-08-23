@@ -1,0 +1,29 @@
+ <html>
+<script src="angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+
+<input type="number" ng-model="count"/><br>
+<input type="number" ng-model="count1"/><br>
+
+<button ng-click="myFunction()">Click Me!</button>
+
+<p>{{ res }}</p>
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+	$scope.count1 = 0;
+	$scope.res=0;
+    $scope.myFunction = function() {
+        $scope.res=parseInt($scope.count)+parseInt($scope.count1);
+    }
+});
+</script> 
+
+</body>
+</html>

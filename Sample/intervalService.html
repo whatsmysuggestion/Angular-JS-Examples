@@ -1,0 +1,23 @@
+ <html>
+<head>
+      <script src="angular.min.js"></script> 	  
+</head>
+<body>
+<div ng-app="testApp" ng-controller="TestCtrl">	 
+  {{data}} 
+ </div>   
+   <script>
+   var test=angular.module("testApp",[]);   
+   test.controller("TestCtrl",function($scope,$interval)
+   {
+   $scope.data=new Date().toLocaleTimeString();
+   
+   $interval(function()
+   {
+    $scope.data=new Date().toLocaleTimeString();
+   },1000);   
+   
+   });      
+   </script>   
+   </body>
+</html>

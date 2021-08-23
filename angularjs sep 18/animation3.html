@@ -1,0 +1,31 @@
+<html>
+<head>
+      <script src = "angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+
+</head>
+<body>
+<div ng-app="mainApp" ng-controller="First">	 
+ 
+ <button ng-click="display()">Reverse</button>
+ 
+ <h1 ng-repeat="x1 in finalData">{{x1}}</h1></br>
+ 
+  </div>  
+<script>
+   var mainApp = angular.module("mainApp", ["ngAnimate"]);
+ 
+         mainApp.controller('First', function($scope) {
+         $scope.square = ["umesh","bihar","india","abc"];
+        
+		$scope.display = function()
+		 {
+		  $scope.finalData=$scope.square.reverse();
+		 }
+		 
+		 });
+		 
+		 
+      </script> 
+   </body>
+</html>

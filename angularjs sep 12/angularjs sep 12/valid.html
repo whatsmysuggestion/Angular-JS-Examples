@@ -1,0 +1,17 @@
+ <html>
+<script src="angular.min.js"></script>  
+<body ng-app="">
+
+ 
+
+<form name="myForm">
+<input name="myInput" ng-model="myInput" ng-maxlength="5" required>
+</form>
+
+ valid:-<h1>{{myForm.myInput.$valid}}</h1>
+ invalid:-<h1>{{myForm.myInput.$invalid}}</h1>
+ pristine:-<h1>{{myForm.myInput.$pristine}}</h1>
+ dirty:-<h1>{{myForm.myInput.$dirty}}</h1>
+
+</body>
+</html>

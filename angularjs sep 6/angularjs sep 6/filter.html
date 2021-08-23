@@ -1,0 +1,44 @@
+ 
+<html>
+<head> 
+<script src="angular.min.js"></script>
+ 
+  <title>Testing $filter Example</title> 
+   <script>  
+var app = angular.module('app', []);  
+    app.controller("FilterController", function ($scope,$filter) {  
+      $scope.name = '';
+      $scope.salary = 0;
+      $scope.UppercaseFilter = function()  
+      {  
+        $scope.name = $filter('uppercase')($scope.name);  
+        
+      }  
+      $scope.CurrencyFilter = function()  
+      {  
+         $scope.salary = $filter('currency')($scope.salary);       
+      }  
+    });  
+</script>  
+</head>  
+<body style="background-color:#DDE4E9;">  
+  <fieldset style="background-color:#DDE4E9;">              
+  
+  <div ng-app="app">        
+    <div ng-controller="FilterController">   
+      Enter Name (in small):          
+        <input type="string" ng-model="name">          
+        <button ng-click="UppercaseFilter()">Uppercase Filter</button></br>       
+      Enter Salary:        
+        <input type="string" ng-model="salary">          
+        <button ng-click="CurrencyFilter()">Currency Filter</button> </br>       
+      
+    </div>        
+</div>  
+ </fieldset>   
+</body>  
+</html>  
+
+
+
+ 

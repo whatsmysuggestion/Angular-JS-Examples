@@ -1,0 +1,41 @@
+ <html>
+<head>
+      <script src="angular.min.js"></script> 
+	  
+</head>
+<body>
+<div ng-app="testApp" ng-controller="TestCtrl">	 
+<table border=1 width="200" height=200>
+<tr><td ng-click="applyFilter('name')">Name</td>
+<td ng-click="applyFilter('no')">No</td></tr>
+
+<tr ng-repeat="x in data|orderBy:fieldName">
+ <td>{{x.name}}</td><td>{{x.no}}</td> 
+</tr>
+
+</table>
+
+  
+ 
+ </div>
+   
+   <script>
+   var test=angular.module("testApp",[]);
+   
+   test.controller("TestCtrl",function($scope)
+   {
+   $scope.data=[{name:'karthik',no:6},
+   {name:'narashimha',no:5},{name:'chinnu',no:3},
+   {name:'subha',no:7}];
+   
+   $scope.applyFilter=function(field)
+   {
+   $scope.fieldName=field;   
+   }
+  	
+   });   
+   
+   </script>
+   
+   </body>
+</html>

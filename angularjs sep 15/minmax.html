@@ -1,0 +1,16 @@
+<html>
+<script src="angular.min.js"></script>
+<body ng-app="">
+
+<form name="myForm"> 
+
+<input name="myInput" ng-model="myInput" ng-maxlength="5" 
+ng-minlength="2">
+
+<h1 ng-if="!myForm.myInput.$valid">The value is Invalid</h1>
+
+</form>
+
+</body>
+</html>
+
